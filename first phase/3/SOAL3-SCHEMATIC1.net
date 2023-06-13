@@ -1,0 +1,13 @@
+* source SOAL3
+R_R1         N00171 N00245  2  
+R_R2         0 N00245  2  
+C_C1         N00536 N00693  1  
+I_I2         0 N00245 DC 3  
+L_L1         N00536 N00693  0.25  
+V_V2         N00171 0  
++SIN 0 2 0.318 0 0 90
+R_R3         0 N00536  2  
+I_I4         N00536 0 DC 0Adc AC 0Aac
++SIN 0 1 0.318 0 0 0
+X_U3         N00245 N00693 Sw_tOpen PARAMS: tOpen=0 ttran=1u Rclosed=0.01
++  Ropen=1Meg

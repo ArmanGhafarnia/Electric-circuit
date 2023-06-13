@@ -1,0 +1,13 @@
+* source SOAL2
+V_V1         N00215 0  
++PULSE 0 1 0 0.0000002 0.0000002 0.3 0.6
+C_C1         N00297 N00540  2  
+R_R1         N00215 N00297  1  
+X_H1    N00540 0 N00327 0 SCHEMATIC1_H1 
+L_L1         N00327 N00297  0.5  
+R_R3         N00297 N00540  0.25  
+
+.subckt SCHEMATIC1_H1 1 2 3 4  
+H_H1         3 4 VH_H1 10
+VH_H1         1 2 0V
+.ends SCHEMATIC1_H1

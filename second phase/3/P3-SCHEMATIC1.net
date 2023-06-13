@@ -1,0 +1,9 @@
+* source P3
+R_R1         N00608 N00033  1k  
+R_R4         N00271 N00814  1k  
+I_I1         0 N00608 DC 1  
+R_R5         0 N00814  1k  
+E_U2         N00033 0 VALUE {LIMIT(V(N00546,N00814)*1E6,-15V,+15V)}
+E_U3         N00271 0 VALUE {LIMIT(V(N00546,N00608)*1E6,-15V,+15V)}
+R_R2         N00033 N00546  1k  
+R_R3         N00546 N00271  1k  

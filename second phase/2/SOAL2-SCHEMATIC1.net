@@ -1,0 +1,13 @@
+* source SOAL2
+X_H1    N04590 0 N03512 0 SCHEMATIC1_H1 
+V_V2         N00116 0 2.7
+R_R1         N00161 N00116  1  
+G_G1         N00116 N00161 N00161 N03512 0.5
+R_R2         N00161 N04590  3  
+R_R4         0 N00116  6m  
+R_R3         N03512 N00161  6  
+
+.subckt SCHEMATIC1_H1 1 2 3 4  
+H_H1         3 4 VH_H1 4
+VH_H1         1 2 0V
+.ends SCHEMATIC1_H1

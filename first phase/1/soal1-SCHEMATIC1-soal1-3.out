@@ -1,0 +1,77 @@
+
+**** 06/15/22 21:47:59 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-soal1-3"  [ c:\users\mahdi\desktop\sbu\elec\project\2\1\soal1-schematic1-soal1-3.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "soal1-schematic1-soal1-3.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 10 0 
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\soal1-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING soal1-SCHEMATIC1.net ****
+* source SOAL1
+I_I3         0 N00531 DC 0Adc AC 0Aac
++SIN 0 0.005 1.59 0 0 103
+R_R1         0 N00291  3k  
+C_C1         0 N00291  33.33u  
+C_C2         N00291 N00531  20u  
+L_L1         N00291 N00531  800  
+L_L2         0 N00531  200  
+R_R3         0 N00531  3k  
+I_I1         N00291 0 DC 0Adc AC 0Aac
++SIN 0 0.003 1.59 0 0 49
+
+**** RESUMING soal1-schematic1-soal1-3.sim.cir ****
+.END
+
+**** 06/15/22 21:47:59 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-soal1-3"  [ c:\users\mahdi\desktop\sbu\elec\project\2\1\soal1-schematic1-soal1-3.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00291)    0.0000 (N00531)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME            0.00
+

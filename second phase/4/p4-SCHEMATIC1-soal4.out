@@ -1,0 +1,49 @@
+
+**** 05/22/22 11:32:02 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-soal4"  [ d:\4\p4-SCHEMATIC1-soal4.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "p4-SCHEMATIC1-soal4.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V_v1 0 10 1 
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\p4-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING p4-SCHEMATIC1.net ****
+* source P4
+R_R1         0 N00029  6  
+R_R6         N00918 N01011  10  
+V_v1         N00051 0 1
+R_R2         N00051 N00144  4  
+R_R4         N00261 N00029  3  
+E_U1         N00261 0 VALUE {LIMIT(V(0,N00144)*1E6,-15V,+15V)}
+E_U2         N01011 0 VALUE {LIMIT(V(N00918,N00029)*1E6,-15V,+15V)}
+R_R5         0 N00918  2  
+R_R3         N00144 N00261  4  
+
+**** RESUMING p4-SCHEMATIC1-soal4.sim.cir ****
+.END
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .02
+

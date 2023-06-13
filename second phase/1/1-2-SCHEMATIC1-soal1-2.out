@@ -1,0 +1,91 @@
+
+**** 05/22/22 20:52:56 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-soal1-2"  [ D:\1-22\1-2-SCHEMATIC1-soal1-2.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "1-2-SCHEMATIC1-soal1-2.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 10 0 
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\1-2-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING 1-2-SCHEMATIC1.net ****
+* source 1-2
+R_R7         N01801 N02011  1  
+R_R5         N01516 N01801  0.2  
+V_V4         0 N05627 12
+R_R19         N08603 N08794  1  
+R_R18         N00703 N08603  1  
+R_R11         N05627 N01801  1  
+E_U6         N08794 0 VALUE {LIMIT(V(0,N08603)*1E6,-15V,+15V)}
+V_V7         N05724 0  
++EXP 0 1 0 1 1E-9 -1
+R_R8         N02011 N02252  15  
+R_R9         N02252 N00433  1  
+E_U4         N02011 0 VALUE {LIMIT(V(0,N01801)*1E6,-15V,+15V)}
+E_U5         N00433 0 VALUE {LIMIT(V(0,N02252)*1E6,-15V,+15V)}
+R_R3         N00703 N01516  1  
+C_C1         N00558 N00703  1  
+R_R1         N00433 N00558  1  
+R_R13         N05724 N01801  1  
+E_U1         N00703 0 VALUE {LIMIT(V(0,N00558)*1E6,-15V,+15V)}
+
+**** RESUMING 1-2-SCHEMATIC1-soal1-2.sim.cir ****
+.END
+
+**** 05/22/22 20:52:56 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-soal1-2"  [ D:\1-22\1-2-SCHEMATIC1-soal1-2.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00433)-14.40E-06 (N00558)-14.40E-06 (N00703)   14.4000 (N01516)    2.4000     
+
+(N01801)-216.0E-12 (N02011) 216.0E-06 (N02252) 14.40E-12 (N05627)  -12.0000     
+
+(N05724)    0.0000 (N08603) 14.40E-06 (N08794)  -14.4000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V4        -1.200E+01
+    V_V7        -2.160E-10
+
+    TOTAL POWER DISSIPATION   1.44E+02  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME            0.00
+

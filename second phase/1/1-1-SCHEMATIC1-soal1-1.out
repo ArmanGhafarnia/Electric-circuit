@@ -1,0 +1,91 @@
+
+**** 05/22/22 20:12:24 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-soal1-1"  [ D:\1-1\1-1-SCHEMATIC1-soal1-1.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "1-1-SCHEMATIC1-soal1-1.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 4 0 
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\1-1-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING 1-1-SCHEMATIC1.net ****
+* source 1-1
+R_R7         N01786 N02011  1  
+R_R5         N00703 N01786  0.05  
+R_R2         N00703 N00897  1  
+C_C2         N00897 N01103  1  
+R_R6         N01786 N01601  0.125  
+E_U2         N01103 0 VALUE {LIMIT(V(0,N00897)*1E6,-15V,+15V)}
+R_R10         N02874 N01786  1  
+R_R4         N01470 N01601  1  
+V_V3         N02874 0  
++SIN 0 5 3.18 0 0 125
+R_R8         N02011 N02252  3  
+R_R9         N02252 N00433  1  
+E_U4         N02011 0 VALUE {LIMIT(V(0,N01786)*1E6,-15V,+15V)}
+E_U5         N00433 0 VALUE {LIMIT(V(0,N02252)*1E6,-15V,+15V)}
+R_R3         N01103 N01470  1  
+C_C1         N00558 N00703  1  
+R_R1         N00433 N00558  1  
+E_U3         N01601 0 VALUE {LIMIT(V(0,N01470)*1E6,-15V,+15V)}
+E_U1         N00703 0 VALUE {LIMIT(V(0,N00558)*1E6,-15V,+15V)}
+
+**** RESUMING 1-1-SCHEMATIC1-soal1-1.sim.cir ****
+.END
+
+**** 05/22/22 20:12:24 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-soal1-1"  [ D:\1-1\1-1-SCHEMATIC1-soal1-1.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00433) 511.9E-15 (N00558) 512.0E-15 (N00703)-512.0E-09 (N00897)-512.0E-09     
+
+(N01103)     .5120 (N01470) 512.0E-09 (N01601)    -.5120 (N01786) 1.536E-18     
+
+(N02011)-1.536E-12 (N02252)-511.9E-21 (N02874)    4.0958 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3        -4.096E+00
+
+    TOTAL POWER DISSIPATION   1.68E+01  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .02
+

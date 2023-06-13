@@ -1,0 +1,77 @@
+
+**** 05/22/22 10:07:25 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-3c"  [ d:\3\p3-SCHEMATIC1-3c.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "p3-SCHEMATIC1-3c.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 5ns 0 
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\p3-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING p3-SCHEMATIC1.net ****
+* source P3
+R_R1         N00608 N00033  1k  
+R_R4         N00271 N00814  1k  
+I_I1         0 N00608 DC 1  
+R_R5         0 N00814  1k  
+E_U2         N00033 0 VALUE {LIMIT(V(N00546,N00814)*1E6,-15V,+15V)}
+E_U3         N00271 0 VALUE {LIMIT(V(N00546,N00608)*1E6,-15V,+15V)}
+R_R2         N00033 N00546  1k  
+R_R3         N00546 N00271  1k  
+
+**** RESUMING p3-SCHEMATIC1-3c.sim.cir ****
+.END
+
+**** 05/22/22 10:07:25 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-3c"  [ d:\3\p3-SCHEMATIC1-3c.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00033)-111.0E-15 (N00271)  -15.0000 (N00546)   -7.5000 (N00608) 1000.0000     
+
+(N00814)   -7.5000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .02
+
